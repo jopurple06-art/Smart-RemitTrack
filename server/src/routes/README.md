@@ -1,0 +1,1 @@
+The Express routers are mounted in `src/app.js`. Routes requiring customer data use the JWT middleware and always scope database reads/writes to the authenticated user's ObjectId.

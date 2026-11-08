@@ -1,0 +1,1 @@
+React entry point, shared navigation, reusable UI components, and routed application pages are maintained in this folder.

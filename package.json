@@ -1,0 +1,19 @@
+{
+  "name": "smart-remittrack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MERN international remittance tracking prototype",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,green \"npm:dev --workspace server\" \"npm:dev --workspace client\"",
+    "demo": "concurrently -k -n API,WEB -c cyan,green \"npm:dev:memory --workspace server\" \"npm:dev --workspace client\"",
+    "build": "npm run build --workspace client",
+    "start": "node server/src/demo.js",
+    "start:prod": "npm run start --workspace server",
+    "seed": "npm run seed --workspace server",
+    "test": "npm run test --workspace server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
